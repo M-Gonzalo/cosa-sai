@@ -1,0 +1,19 @@
+{
+  "name": "gemini-docs-mcp",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/js-yaml": "^4.0.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.22.0",
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.2"
+  }
+}

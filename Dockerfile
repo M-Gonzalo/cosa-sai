@@ -10,10 +10,7 @@ COPY . /app/gemini-docs-mcp
 WORKDIR /app/gemini-docs-mcp
 RUN bun install --ignore-scripts
 
-# Ensure the default prompt file exists
-RUN mkdir -p prompts && echo "Default prompt content" > prompts/default.txt
-
 # Set workdir back to /app for running the command
 WORKDIR /app
 
-CMD ["bun", "/app/gemini-docs-mcp/src/index.ts", "--verbose"]
+CMD ["bun", "/app/gemini-docs-mcp/src/index.ts"]

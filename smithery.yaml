@@ -1,0 +1,20 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - geminiApiKey
+    properties:
+      geminiApiKey:
+        type: string
+        description: API key for authenticating with the Gemini API.
+    description: Configuration for Gemini Docs MCP server.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'bun', args: ['/app/gemini-docs-mcp/src/index.ts', '--verbose'], env: { GEMINI_API_KEY: config.geminiApiKey } })
+  exampleConfig:
+    geminiApiKey: dummy_api_key_here

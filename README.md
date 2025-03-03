@@ -1,5 +1,7 @@
 # Gemini Docs MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@M-Gonzalo/cosa-sai)](https://smithery.ai/server/@M-Gonzalo/cosa-sai)
+
 ## Description
 
 This project implements an MCP server that enables access to documentation for various technologies using the Gemini API with its gigantic context window of 2M tokens. It should work for any client, but is targeted especially to the Roo/Cline environment.
@@ -34,6 +36,14 @@ There are some limitations, though:
 *   Provides a logging system for debugging (enabled with the `--verbose` flag).
 
 ## Getting Started
+
+### Installing via Smithery
+
+To install Gemini Docs Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@M-Gonzalo/cosa-sai):
+
+```bash
+npx -y @smithery/cli install @M-Gonzalo/cosa-sai --client claude
+```
 
 This MCP server is automatically started and managed by the client. To enable it, you need to configure it in your settings file (for example, `~/.config/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json`). There's usually a button for opening up the settings file in the client.
 
